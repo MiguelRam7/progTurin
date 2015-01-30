@@ -1,0 +1,118 @@
+==LISTA COMANDOS BÁSICOS GIT==
+
+<<EJEMPLO>>
+
+git config --global user.name
+git status <me indica qué tengo>
+git config --global user.name "migue"
+git config --global user.email "lol@gmail.com"
+git add index.html <agregar archivo al repositorio
+git commit -m "agrego el arch index"
+git diff index.html <muestra lo que se borró o eliminó>
+git add . <agregar todo lo que haz hecho nuevo>
+git commit -m "cambiaste el estilo"
+   <crar punto de restauración>
+git checkout index.html <revertir a un estado anterior>
+git branch <muestra las ramas que hay>
+git branch nuevaRama <crear ramas para crear punto de restauración>
+git checkout nuevaRama<cambiar de rama>
+git log <ver los commits que se han hecho>
+git merge nuevaRama <unirf ramas>
+git branch -d nuevaRama <borrar rama>
+
+============================================================
+1. git help
+    Muestra la ayuda para ese comando
+
+b) Creación de un repositorio:
+
+2. git init
+    Crea un repositorio en el directorio actual
+
+3. git clone <url>
+    Clona un repositorio remoto dentro de un directorio
+
+c) Operaciones sobre Archivos:
+
+4. git rm <ruta>
+    Remueve un archivo o directorio del árbol de trabajo
+      -f : Fuerza la eliminación de un archivo del repositorio
+
+5. git mv <origen> <destino>
+    Mueve el archivo o directorio a una nueva ruta
+      -f : Sobre-escribe los archivos existentes en la ruta destino
+
+6. git checkout [rev] <archivo>
+    Recupera un archivo desde la rama o revisión actual
+      -f : Sobre-escribe los cambios locales no guardados
+
+d) Trabajando sobre el código:
+
+7. git status
+    Imprime un reporte del estado actual del árbol de trabajo local
+
+8. git diff [ruta]
+    Muestra la diferencia entre los cambios en el árbol de trabajo local
+
+9. git diff HEAD ruta
+    Muestra las diferencias entre los cambios registrados y los no registrados
+
+10. git add path
+    Selecciona el archivo para que sea incluido en el próximo commit
+
+11. git reset HEAD <ruta>
+    Marca el archivo para que no sea incluido en el próximo commit
+
+12. git commit
+    Realiza el commit de los archivos que han sido registrados (con git-add)
+      -a : Automáticamente registra todos los archivos modificados
+
+13. git reset --soft HEAD^
+    Deshace commit & conserva los cambios en el árbol de trabajo local
+
+14. git reset --hard HEAD^
+    Restablece el árbol de trabajo local a la versión del ultimo commit
+
+15. git clean
+    Elimina archivos desconocidos del árbol de trabajo local
+
+e) Examinando el histórico:
+
+16. git log [ruta]
+    Muestra el log del commit, opcionalmente de la ruta especifica
+
+17. git blame [archivo]
+    Muestra el archivo relacionado con las modificaciones realizadas
+
+f) Repositorios remotos:
+
+18. git fetch [remote]
+    Trae los cambios desde un repositorio remoto
+
+19. git pull [remote]
+    Descarga y guarda los cambios realizados desde un repositorio remoto
+
+20. git push <remote>
+    Guarda los cambios en un repositorio remoto
+
+21. git remote
+    Lista los repositorios remotos
+
+22. git remote add remote url
+    Añade un repositorio remoto a la lista de repositorios registrados
+
+g) Ramas:
+23. git checkout rama
+    Cambia el árbol de trabajo local a la rama indicada
+      -b rama : Crea la rama antes de cambiar el árbol de trabajo local a dicha rama
+
+24. git branch
+    Lista las ramas locales
+
+25. git branch -f rama rev
+    Sobre-escribe la rama existente y comienza desde la revisión
+
+26. git merge rama
+    Guarda los cambios desde la rama
+
+git clone -/
